@@ -57,7 +57,7 @@ npm run cf-typegen
 Deploy to Cloudflare:
 
 ```sh
-npm run publish
+npm run deploy
 ```
 
 ## References
