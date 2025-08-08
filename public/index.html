@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello, World!</title>
+    <script src="https://cdn.jsdelivr.net/npm/@cap.js/widget"></script>
+  </head>
+  <body>
+    <cap-widget id="cap" data-cap-api-endpoint="/cap/"></cap-widget>
+    <script>
+      const widget = document.querySelector("#cap");
+
+      widget.addEventListener("solve", function (e) {
+        const token = e.detail.token;
+
+        console.log("Challenge solved with token:", token);
+      });
+    </script>
+  </body>
+</html>
