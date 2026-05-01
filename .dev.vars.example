@@ -1,0 +1,12 @@
+# Copy this file to .dev.vars for local development.
+# Never commit .dev.vars.
+
+# Optional. When set, /siteverify requires callers to submit this same value
+# as "secret". Use a long random string and store the production value with:
+# wrangler secret put CAP_SITE_SECRET
+CAP_SITE_SECRET=replace-with-a-long-random-secret
+
+# Optional. Comma-separated browser origins that may call the public widget API
+# if your website and Worker are on different origins.
+# Example: CAP_ALLOWED_ORIGINS=https://example.com,https://www.example.com
+CAP_ALLOWED_ORIGINS=
