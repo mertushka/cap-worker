@@ -6,7 +6,7 @@ export default defineConfig({
 		cloudflareTest({
 			main: "./src/index.ts",
 			wrangler: {
-				configPath: "./wrangler.jsonc",
+				configPath: "./wrangler.test.jsonc",
 			},
 		}),
 	],
