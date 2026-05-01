@@ -4,14 +4,14 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2026-05-01",
 	"assets": {
-		"directory": "./public",
+		"directory": "./public"
 	},
 	"observability": {
 		"enabled": true,
-		"head_sampling_rate": 1,
+		"head_sampling_rate": 1
 	},
 	"vars": {
-		"CAP_ALLOWED_ORIGINS": "",
+		"CAP_ALLOWED_ORIGINS": ""
 	},
 	"ratelimits": [
 		{
@@ -19,39 +19,39 @@
 			"namespace_id": "1001",
 			"simple": {
 				"limit": 30,
-				"period": 60,
-			},
+				"period": 60
+			}
 		},
 		{
 			"name": "REDEEM_RATE_LIMITER",
 			"namespace_id": "1002",
 			"simple": {
 				"limit": 60,
-				"period": 60,
-			},
+				"period": 60
+			}
 		},
 		{
 			"name": "VERIFY_RATE_LIMITER",
 			"namespace_id": "1003",
 			"simple": {
 				"limit": 120,
-				"period": 60,
-			},
-		},
+				"period": 60
+			}
+		}
 	],
 	"durable_objects": {
 		"bindings": [
 			{
 				"name": "CAP_STORE",
-				"class_name": "CapStore",
-			},
-		],
+				"class_name": "CapStore"
+			}
+		]
 	},
 	"migrations": [
 		{
 			"tag": "rewrite-capstore-2026-05-01",
 			"new_sqlite_classes": ["CapStore"],
-			"deleted_classes": ["CapDO"],
-		},
-	],
+			"deleted_classes": ["CapDO"]
+		}
+	]
 }
